@@ -65,6 +65,7 @@ nav .nav-wrap a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .search-bar-cont input{
     width: 100%;
@@ -76,19 +77,70 @@ nav .nav-wrap a:hover{
     width:548px;
     display: flex;
     align-items: center;
+  
     border-radius: 2rem;
     justify-content: space-evenly;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0.1rem auto;
-    border: 2px solid rgba(0, 0, 0, 0.300);
+    border: 1px solid #00000030; 
+}
+.add-style{
+    border-radius: 2rem 2rem 0 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #00000030;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
 }
 .search-wrap .material-icons{
     color: rgba(128, 128, 128, 0.300);
     width: 25px;
 }
 .search-wrap:hover{
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+.search-wrap .close{
+    margin-right: 5px;
+    padding-right: 30px;
+    border-right: 2px solid #00000030;
+    display: flex;
+    display: none;
+    cursor: pointer;
+}
+.suggestions-section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 548px;
+    top: 4rem;
+    background-color: white;
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    display: none;
+}
+
+.line{
+    content: '';
+}
+.suggestion-txt{
+    padding: 0.6rem 1rem;
+    display: flex;
+    color: rgba(0, 0, 0, 0.734);
+    align-items: center;
+}
+.suggestion-txt:hover{
+    background-color: rgba(60,64,67,0.08);
+}
+.suggestions-section .buttons-section{
+    margin-top: 1rem;
+}
+.suggestions-section .buttons-section .btn-wrap{
+    padding-bottom: 1rem;
+}
+.suggestion-txt span{
+    color: rgba(128, 128, 128, 0.300);
+    width: 25px;
+    margin-right: 1rem;
 }
 span svg{
     width: 25px;
@@ -211,7 +263,7 @@ footer a:hover{
     cursor: pointer;
 }
 .flexer{
-    display: flex;
+    display: flex !important;
 }
 .settings-popup a{
     padding: 10px;
@@ -221,6 +273,7 @@ footer a:hover{
 .settings-popup a:hover{
     text-decoration: underline;
 }
+
 @media (max-width:1200px){
     .down-footer-cont{
         justify-content: space-evenly;
@@ -231,6 +284,9 @@ footer a:hover{
 }
 @media (max-width:603px){
     .search-wrap{
+        width: 90%;
+    }
+    .suggestions-section{
         width: 90%;
     }
     .languages-wrap{
@@ -254,5 +310,10 @@ footer a:hover{
     }
     .privacy-wrap{
         flex-wrap: wrap;
+    }
+}
+@media (max-width:308px){
+    .suggestions-section .buttons-section button{
+        width: 100px;
     }
 }

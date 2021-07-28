@@ -24,6 +24,7 @@ const search_bar=document.querySelector('.search-wrap');
 const close_icon=search_bar.querySelector('.close');
 const suggestions=document.querySelector('.suggestions-section');
 const inp=search_bar.querySelector('input');
+inp.autocomplete="off";
 let suggestion_txt;
 function checkActive(){
     if(inp===document.activeElement){
@@ -41,7 +42,7 @@ close_icon.addEventListener('click',()=>{
     inp.value='';
 });
 window.addEventListener("click",checkActive);
-inp.addEventListener('keypress',()=>{
+inp.addEventListener('input',()=>{
     fetchSuggestion(inp.value)});
 async function fetchSuggestion(txt){
     const regex = /data=\"([\w ]*)\"/gi;

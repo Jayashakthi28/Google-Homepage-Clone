@@ -45,7 +45,8 @@ nav .nav-wrap{
     cursor: pointer;
 }
 .grid-cont:hover{
-    background-color: rgba(128, 128, 128, 0.227);
+    /* background-color: rgba(128, 128, 128, 0.227); */
+    background-color: rgba(60,64,67,0.08);
 }
 nav .nav-wrap a:hover{
     text-decoration: underline;
@@ -194,4 +195,37 @@ footer .country-cont{
 }
 footer a:hover{
     text-decoration: underline;
+}
+.settings-popup{
+    position: absolute;
+    justify-content: space-evenly;
+    font-size: 14px;
+    flex-direction: column;
+    border: 1px solid #70757a;
+    background: #fff;
+    bottom: 46px;
+    right: 10px;
+    display: none;
+}
+.set{
+    cursor: pointer;
+}
+.flexer{
+    display: flex;
+}
+.settings-popup a{
+    padding: 10px;
+    text-decoration: none;
+    color: #222;
+}
+.settings-popup a:hover{
+    text-decoration: underline;
+}
+@media (max-width:1200px){
+    .down-footer-cont{
+        justify-content: space-evenly;
+    }
+    .settings-popup{
+        right: 130px;
+    }
 }

@@ -229,3 +229,30 @@ footer a:hover{
         right: 130px;
     }
 }
+@media (max-width:603px){
+    .search-wrap{
+        width: 90%;
+    }
+    .languages-wrap{
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .languages-wrap a{
+        margin: 0 0.5rem;
+    }
+    .down-footer-cont{
+        flex-wrap: wrap;
+    }
+    footer{
+        height: auto;
+    }
+    .ab-wrap{
+        flex-wrap: wrap;
+    }
+    .ab-wrap a{
+        margin: 0.2rem;
+    }
+    .privacy-wrap{
+        flex-wrap: wrap;
+    }
+}
